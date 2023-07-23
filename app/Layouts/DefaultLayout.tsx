@@ -2,7 +2,7 @@ import React from 'react'
 import Header from './Default/Header'
 import Footer from './Default/Footer'
 
-const DefaultLayout = ({children}: {children: React.ReactNode}) => {
+const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <Header />

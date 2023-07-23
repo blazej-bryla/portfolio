@@ -1,8 +1,11 @@
+'use client'
+import { Navbar } from '@/app/components'
 import React from 'react'
-
 const Header = () => {
   return (
-    <div>Header</div>
+    <div>
+      <Navbar />
+    </div>
   )
 }
 
