@@ -1,5 +1,7 @@
+import DefaultLayout from './Layouts/DefaultLayout'
+
 const Page = () => {
-  return <div>HomePage</div>
+  return <DefaultLayout>Main page</DefaultLayout>
 }
 
 export default Page
