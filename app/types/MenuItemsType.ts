@@ -1,0 +1,4 @@
+export type MenuItemsType = {
+  label: string
+  href: string
+}
