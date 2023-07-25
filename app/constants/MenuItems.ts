@@ -1,4 +1,6 @@
-export const MenuItems = [
+import { MenuItemsType } from '../types'
+
+export const MenuItems: MenuItemsType[] = [
   {
     label: 'About me',
     href: '#about-me'
