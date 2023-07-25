@@ -1,13 +1,11 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "react"],
+  "plugins": ["@typescript-eslint", "react", "tailwindcss"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended",
-    "tailwindcss",
-    "prettier"
+    "plugin:react/recommended"
   ],
   "env": {
     "browser": true,
