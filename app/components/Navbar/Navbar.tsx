@@ -1,6 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { useState } from 'react'
+import { MenuItems } from '@/app/constants'
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
@@ -19,24 +20,15 @@ export const Navbar = () => {
             </div>
             <div className="hidden md:block">
               <div className="ml-4 flex items-center md:ml-6">
-                <Link
-                  href="#"
-                  className="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700"
-                >
-                  Strona 1
-                </Link>
-                <Link
-                  href="#"
-                  className="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700"
-                >
-                  Strona 2
-                </Link>
-                <Link
-                  href="#"
-                  className="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700"
-                >
-                  Strona 3
-                </Link>
+                {MenuItems.map((item) => (
+                  <Link
+                    key={`${item.label}-section`}
+                    href={item.href}
+                    className="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
               </div>
             </div>
 
@@ -86,15 +78,15 @@ export const Navbar = () => {
           isMenuOpen ? 'flex' : 'hidden'
         } h-screen flex-col items-center justify-center bg-gray-800`}
       >
-        <Link href="#" className="p-4 text-white hover:bg-gray-700">
-          Strona 1
-        </Link>
-        <Link href="#" className="p-4 text-white hover:bg-gray-700">
-          Strona 2
-        </Link>
-        <Link href="#" className="p-4 text-white hover:bg-gray-700">
-          Strona 3
-        </Link>
+        {MenuItems.map((item) => (
+          <Link
+            key={`${item.label}-section`}
+            href={item.href}
+            className="p-4 text-white hover:bg-gray-700"
+          >
+            {item.label}
+          </Link>
+        ))}
       </div>
     </div>
   )
