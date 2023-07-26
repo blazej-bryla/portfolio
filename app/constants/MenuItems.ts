@@ -3,18 +3,22 @@ import { MenuItemsType } from '../types'
 export const MenuItems: MenuItemsType[] = [
   {
     label: 'About me',
-    href: '#about-me'
+    href: '#about-me',
+    icon: 'tabler:user'
   },
   {
     label: 'Projects',
-    href: '#projects'
+    href: '#projects',
+    icon: 'tabler:clipboard-list'
   },
   {
     label: 'Certifications',
-    href: '#certifications'
+    href: '#certifications',
+    icon: 'tabler:medal'
   },
   {
     label: 'Contact',
-    href: '#contact'
+    href: '#contact',
+    icon: 'tabler:mail'
   }
 ]
