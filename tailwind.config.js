@@ -7,7 +7,15 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}'
   ],
   theme: {
-    extend: {}
+    extend: {
+      backgroundColor: {
+        dark: '#131417'
+      },
+      textColor: {
+        active: '#9E86FF',
+        gray: '#676D75'
+      }
+    }
   },
   darkMode: 'class'
 }
