@@ -1,9 +1,9 @@
-import { MobileNavbar, ThemeSwitcher } from '.'
+import { DesktopNavbar, MobileNavbar } from '.'
 
 export const Navbar = () => {
   return (
     <nav>
-      <ThemeSwitcher />
+      <DesktopNavbar />
       <MobileNavbar />
     </nav>
   )
