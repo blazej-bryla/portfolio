@@ -14,7 +14,7 @@ export const DesktopNavbar = () => {
       </div>
       <div className="flex">
         <ThemeSwitcher />
-        <Avatar />
+        <Avatar size={40} picture="profile" />
       </div>
     </div>
   )
