@@ -1,5 +1,11 @@
+import { Hero } from './pages'
+
 const Page = () => {
-  return <main>Main page</main>
+  return (
+    <main>
+      <Hero />
+    </main>
+  )
 }
 
 export default Page
