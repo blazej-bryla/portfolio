@@ -1,13 +1,15 @@
 import React from 'react'
 import Image from 'next/image'
-import Test from '../../assets/pictures/profile-picture.webp'
-export const Avatar = () => {
+import { HeroPicture, ProfilePicture } from '@/app/assets'
+import { Avatar as AvatarType } from '@/app/types'
+
+export const Avatar = ({ size, picture }: AvatarType) => {
   return (
     <Image
-      src={Test}
+      src={picture === 'hero' ? HeroPicture : ProfilePicture}
       alt="blazej-bryla-avaatar"
-      width={40}
-      height={40}
+      width={size}
+      height={size}
       className="rounded-[50%]"
     />
   )
