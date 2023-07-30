@@ -16,7 +16,7 @@ module.exports = {
         gray: '#676D75'
       },
       fontFamily: {
-        jost: ['Jost', 'sans-serif']
+        borel: ['Borel', 'cursive']
       }
     }
   },
