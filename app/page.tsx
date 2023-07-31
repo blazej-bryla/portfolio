@@ -1,9 +1,10 @@
-import { Hero } from './pages'
+import { AboutMe, Hero } from './pages'
 
 const Page = () => {
   return (
-    <main>
+    <main className="">
       <Hero />
+      <AboutMe />
     </main>
   )
 }
