@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export const HeroGraphic = () => {
   return (
-    <div className="absolute -z-[10] flex h-screen w-screen items-center justify-center bg-dark">
+    <div className="absolute -z-[10] h-screen w-full bg-dark">
       <Image
         alt="Background Image"
         src={BackgroundHero}

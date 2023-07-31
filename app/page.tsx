@@ -1,10 +1,11 @@
-import { AboutMe, Hero } from './pages'
+import { AboutMe, Hero, TechnologyStack } from './pages'
 
 const Page = () => {
   return (
-    <main className="">
+    <main>
       <Hero />
       <AboutMe />
+      <TechnologyStack />
     </main>
   )
 }
