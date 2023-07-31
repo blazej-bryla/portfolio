@@ -9,14 +9,17 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        dark: '#131417'
+        dark: '#131417',
+        lightDark: '#131432'
       },
       textColor: {
-        active: '#9E86FF',
         gray: '#676D75'
       },
       fontFamily: {
         borel: ['Borel', 'cursive']
+      },
+      colors: {
+        active: '#9E86FF'
       }
     }
   },
