@@ -1,4 +1,5 @@
-export { Navbar } from './Navbar/Navbar'
-export { Header } from './Header'
-export { Footer } from './Footer'
-export { ThemeSwitcher } from './Navbar/ThemeSwitcher/ThemeSwitcher'
+import { Navbar } from './Navbar/Navbar'
+import { Header } from './Header'
+import { Footer } from './Footer'
+
+export { Navbar, Header, Footer }
