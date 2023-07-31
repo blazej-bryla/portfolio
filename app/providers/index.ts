@@ -1,1 +1,3 @@
-export { AdditionalThemeProvider } from './AdditiionalThemeProvider'
+import { AdditionalThemeProvider } from './AdditiionalThemeProvider'
+
+export { AdditionalThemeProvider }
