@@ -1,6 +1,13 @@
-export { Navbar } from './Navbar'
-export { MobileNavbar } from './MobileNavbar/MobileNavbar'
-export { MobileMenuItem } from './MobileNavbar/MobileMenuItem'
-export { ThemeSwitcher } from './ThemeSwitcher/ThemeSwitcher'
-export { DesktopNavbar } from './DesktopNavbar/DesktopNavbar'
-export { DesktopMenuItem } from './DesktopNavbar/DesktopMenuItem'
+import { MobileNavbar } from './MobileNavbar/MobileNavbar'
+import { MobileMenuItem } from './MobileNavbar/MobileMenuItem'
+import { ThemeSwitcher } from './ThemeSwitcher/ThemeSwitcher'
+import { DesktopNavbar } from './DesktopNavbar/DesktopNavbar'
+import { DesktopMenuItem } from './DesktopNavbar/DesktopMenuItem'
+
+export {
+  MobileNavbar,
+  MobileMenuItem,
+  ThemeSwitcher,
+  DesktopNavbar,
+  DesktopMenuItem
+}

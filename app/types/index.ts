@@ -1,2 +1,4 @@
-export type { MenuItemsType } from './MenuItemsType'
-export type { Avatar } from './AvatarType'
+import { MenuItemsType } from './MenuItemsType'
+import { Avatar } from './AvatarType'
+
+export type { MenuItemsType, Avatar }
