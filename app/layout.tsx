@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={(inter.className, 'mb-[100px]')}>
+      <body className={(inter.className, 'mb-[100px] md:mb-0')}>
         <AdditionalThemeProvider>
           <Header />
           {children}
