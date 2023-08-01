@@ -20,6 +20,12 @@ module.exports = {
       },
       colors: {
         active: '#9E86FF'
+      },
+      maxWidth: {
+        base: '1400px'
+      },
+      screens: {
+        base: '1400px'
       }
     }
   },
