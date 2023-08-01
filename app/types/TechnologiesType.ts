@@ -1,9 +1,9 @@
 export type TechnologiesCategory = {
   label: string
-  items: TechnolgiesItem[]
+  items: TechnologiesItem[]
 }
 
-export type TechnolgiesItem = {
+export type TechnologiesItem = {
   label: string
   icon: string
   href: string

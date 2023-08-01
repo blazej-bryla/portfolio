@@ -1,6 +1,6 @@
 import { TechnologiesCategory as TechnologiesCategoryType } from '@/app/types'
 import React from 'react'
-import { TechnologiesItem } from './TechnologiesItem'
+import { TechnologiesItem } from '../../components/'
 
 export const TechnologiesCategory = ({
   item
