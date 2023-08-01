@@ -2,7 +2,7 @@ import React from 'react'
 
 export const HeroText = () => {
   return (
-    <div className="flex flex-col items-center justify-center px-2 text-center text-white">
+    <div className="flex flex-col items-center justify-center px-2 text-center text-white base:px-0">
       <h1 className="font-borel text-xl sm:text-2xl xl:text-[48px]">
         Transforming the web with every line of code
       </h1>

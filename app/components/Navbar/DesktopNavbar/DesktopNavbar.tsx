@@ -5,7 +5,7 @@ import { Avatar } from '../../Avatar/Avatar'
 
 export const DesktopNavbar = () => {
   return (
-    <div className="hidden h-[72px] w-full items-center justify-between bg-dark px-6  md:flex">
+    <div className="mx-auto hidden h-[72px] max-w-base items-center justify-between bg-dark px-6  md:flex">
       <p className="text-gray">Błażej Bryła</p>
       <div className="flex h-10">
         {MenuItems.map((item) => (
