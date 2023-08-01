@@ -1,5 +1,12 @@
 import { MenuItemsType } from './MenuItemsType'
 import { Avatar } from './AvatarType'
-import { TechnologiesCategory, TechnolgiesItem } from './TechnologiesType'
+import { TechnologiesCategory, TechnologiesItem } from './TechnologiesType'
+import { ProjectItem } from './ProjectTypes'
 
-export type { MenuItemsType, Avatar, TechnologiesCategory, TechnolgiesItem }
+export type {
+  MenuItemsType,
+  Avatar,
+  TechnologiesCategory,
+  TechnologiesItem,
+  ProjectItem
+}
