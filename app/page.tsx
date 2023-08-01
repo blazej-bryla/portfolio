@@ -1,4 +1,4 @@
-import { AboutMe, Hero, TechnologyStack } from './pages'
+import { AboutMe, Hero, Projects, TechnologyStack } from './pages'
 
 const Page = () => {
   return (
@@ -6,6 +6,7 @@ const Page = () => {
       <Hero />
       <AboutMe />
       <TechnologyStack />
+      <Projects />
     </main>
   )
 }
