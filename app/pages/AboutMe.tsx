@@ -1,12 +1,14 @@
 import React from 'react'
-import { SectionLabel } from '../components'
+import { Container, SectionLabel } from '../components'
 import { AboutMeText } from './AboutMe/AboutMeText'
 
 export const AboutMe = () => {
   return (
-    <div id="about-me" className="flex flex-col bg-dark px-2">
-      <SectionLabel label="About Me" />
-      <AboutMeText />
+    <div id="about-me" className="bg-dark">
+      <Container>
+        <SectionLabel label="About Me" />
+        <AboutMeText />
+      </Container>
     </div>
   )
 }

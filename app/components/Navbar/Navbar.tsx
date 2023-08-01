@@ -2,7 +2,7 @@ import { DesktopNavbar, MobileNavbar } from '.'
 
 export const Navbar = () => {
   return (
-    <nav>
+    <nav className="w-full bg-dark">
       <DesktopNavbar />
       <MobileNavbar />
     </nav>
