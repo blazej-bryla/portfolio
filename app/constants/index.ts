@@ -1,3 +1,3 @@
 import { MenuItems } from './MenuItems'
-
-export { MenuItems }
+import { TechnologiesCategoryList } from './TechnologiesItems'
+export { MenuItems, TechnologiesCategoryList }
