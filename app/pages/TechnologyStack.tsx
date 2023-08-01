@@ -5,7 +5,7 @@ import { TechnologiesCategory } from './TechnologyStack/TechnologiesCategory'
 
 export const TechnologyStack = () => {
   return (
-    <div className=" bg-dark pt-4">
+    <div className="bg-dark pt-24">
       <Container>
         <SectionLabel label="My Technology Stack:" />
         <div className="flex flex-col gap-4 md:grid md:grid-cols-2 md:gap-4 lg:grid-cols-4">
