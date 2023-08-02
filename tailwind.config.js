@@ -8,16 +8,14 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundColor: {
-        dark: '#131417',
-        lightDark: '#131432'
-      },
       fontFamily: {
         borel: ['Borel', 'cursive']
       },
       colors: {
         active: '#9E86FF',
-        gray: '#676D75'
+        gray: '#676D75',
+        dark: '#131417',
+        lightDark: '#1a1c4d'
       },
       maxWidth: {
         base: '1400px'
