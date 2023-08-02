@@ -4,5 +4,14 @@ import { Footer } from './Footer'
 import { SectionLabel } from './SectionLabel'
 import { Container } from './Container'
 import { TechnologiesItem } from './TechnologiesItem'
+import { Gallery } from './Gallery'
 
-export { Navbar, Header, Footer, SectionLabel, Container, TechnologiesItem }
+export {
+  Navbar,
+  Header,
+  Footer,
+  SectionLabel,
+  Container,
+  TechnologiesItem,
+  Gallery
+}
