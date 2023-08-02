@@ -5,7 +5,7 @@ import { SectionLabel } from './SectionLabel'
 import { Container } from './Container'
 import { TechnologiesItem } from './TechnologiesItem'
 import { Gallery } from './Gallery'
-
+import { Input } from './Inputs'
 export {
   Navbar,
   Header,
@@ -13,5 +13,6 @@ export {
   SectionLabel,
   Container,
   TechnologiesItem,
-  Gallery
+  Gallery,
+  Input
 }
