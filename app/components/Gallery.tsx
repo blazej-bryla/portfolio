@@ -41,7 +41,7 @@ export const Gallery = ({
               style={{ objectFit: 'cover' }}
               width={500}
               height={500}
-              className="rounded-lg"
+              className="rounded-lg border border-gray dark:border-active"
             />
           </div>
         ))}

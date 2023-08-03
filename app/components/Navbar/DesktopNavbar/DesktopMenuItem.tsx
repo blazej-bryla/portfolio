@@ -8,7 +8,7 @@ export const DesktopMenuItem = ({ item }: { item: MenuItemsType }) => {
   return (
     <Link
       href={item.href}
-      className="flex h-10 w-[160px] items-center justify-center gap-2 rounded-lg text-gray transition duration-300 md:hover:text-active"
+      className="flex h-10 w-[160px] items-center  justify-center gap-2 rounded-lg text-dark transition duration-300 dark:text-gray md:hover:text-active"
     >
       <Icon icon={item.icon} width={20} height={20} />
       <p className="text-sm">{item.label}</p>

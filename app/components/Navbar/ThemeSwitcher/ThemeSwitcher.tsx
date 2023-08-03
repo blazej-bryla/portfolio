@@ -20,16 +20,16 @@ export const ThemeSwitcher = () => {
       {theme === 'dark' ? (
         <Icon
           icon="ph:moon"
-          width="16"
-          height="16"
+          width="25"
+          height="25"
           className="cursor-pointer"
           onClick={() => setTheme('light')}
         />
       ) : (
         <Icon
           icon="ph:sun"
-          width="16"
-          height="16"
+          width="25"
+          height="25"
           className="cursor-pointer"
           onClick={() => setTheme('dark')}
         />

@@ -4,7 +4,7 @@ import { CertificateList } from '../constants'
 
 export const Certificates = () => {
   return (
-    <div className="w-full bg-dark pt-24">
+    <div className="w-full pt-24 dark:bg-dark">
       <Container>
         <SectionLabel label="Certificates:" />
         <Gallery imageList={CertificateList} />
