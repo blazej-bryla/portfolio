@@ -2,7 +2,7 @@ import { MenuItemsType } from './MenuItemsType'
 import { Avatar } from './AvatarType'
 import { TechnologiesCategory, TechnologiesItem } from './TechnologiesType'
 import { ProjectItem } from './ProjectTypes'
-import { GalleryProps } from './GalleryType'
+import { GalleryProps, GalleryUrlType } from './GalleryType'
 import { DefaultInput } from './InputTypes'
 
 export type {
@@ -12,5 +12,6 @@ export type {
   TechnologiesItem,
   ProjectItem,
   GalleryProps,
-  DefaultInput
+  DefaultInput,
+  GalleryUrlType
 }
