@@ -10,7 +10,7 @@ export const Gallery = ({
     { label: 'loaded image', image: '/certificates/example-certificate.webp' }
   ]
 }: {
-  imageList: GalleryProps
+  imageList: Array<GalleryProps>
 }) => {
   const imageUrls = galleryArrayToUrls(imageList)
   const [lightboxController, setLightboxController] = useState({
