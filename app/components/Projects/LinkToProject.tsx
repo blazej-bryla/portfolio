@@ -6,10 +6,10 @@ export const LinkToProject = ({ demo, repo, label }: LinkToProjectProps) => {
     <div className="flex flex-col gap-2">
       {demo && (
         <>
-          <p>Demo:</p>
+          <p className="text-dark dark:text-white">Demo:</p>
           <a
             href={demo}
-            className="w-fit rounded-lg bg-lightDark p-4 text-sm text-active"
+            className="w-fit rounded-lg border border-dark p-4 text-sm text-active  dark:border-0 dark:bg-lightDark"
           >
             <i>{label}</i>
           </a>
@@ -17,10 +17,10 @@ export const LinkToProject = ({ demo, repo, label }: LinkToProjectProps) => {
       )}
       {repo && (
         <>
-          <p>Github repository:</p>
+          <p className="text-dark dark:text-white">Github repository:</p>
           <a
             href={repo}
-            className="w-fit rounded-lg bg-lightDark p-4 text-sm text-active"
+            className="w-fit rounded-lg border border-dark p-4 text-sm text-active  dark:border-0 dark:bg-lightDark"
           >
             <i>{label}</i>
           </a>

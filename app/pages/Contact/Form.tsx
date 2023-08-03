@@ -12,7 +12,7 @@ export const Form = () => {
       <div className="flex w-full justify-end">
         <button
           type="submit"
-          className="w-fit rounded-lg border border-active px-6 py-2 text-active transition duration-300 md:hover:bg-active md:hover:text-white"
+          className="w-fit rounded-lg border border-gray px-6 py-2 transition duration-300 dark:border-active dark:text-active md:hover:bg-gray md:hover:text-white dark:md:hover:bg-active"
         >
           Send
         </button>

@@ -4,8 +4,8 @@ import React from 'react'
 export const Description = ({ description }: DescriptionProps) => {
   return (
     <div>
-      <p>Description:</p>
-      <div className="w-fit rounded-lg bg-lightDark p-4 text-sm tracking-wide">
+      <p className="text-dark dark:text-white">Description:</p>
+      <div className="w-fit rounded-lg border border-dark p-4 text-sm tracking-wide text-dark dark:border-0 dark:bg-lightDark dark:text-white">
         <i>{description}</i>
       </div>
     </div>
