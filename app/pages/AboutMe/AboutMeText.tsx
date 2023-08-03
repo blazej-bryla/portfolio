@@ -2,7 +2,7 @@ import React from 'react'
 
 export const AboutMeText = () => {
   return (
-    <p className="tracking-wider text-white">
+    <p className="tracking-wider text-dark dark:text-white">
       I&apos;m <i className="font-borel tracking-normal">Błażej</i>, a
       passionate frontend developer 💻 specializing in JavaScript&apos;s
       ecosystem 🍃.

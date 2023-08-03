@@ -27,14 +27,14 @@ export const Input = ({ type, label }: DefaultInput) => {
         <label
           className={`${
             isFocused || inputValue
-              ? '-translate-x-2 -translate-y-[35px] text-sm text-active '
+              ? '-translate-x-2 -translate-y-[35px] text-sm '
               : 'text-gray-500 '
-          } pointer-events-none absolute left-3 top-[10px] text-gray transition-all duration-300`}
+          } pointer-events-none absolute left-3 top-[10px]  text-gray transition-all duration-300`}
         >
           {label}
         </label>
         <textarea
-          className={`block w-full rounded bg-lightDark p-3 text-sm text-white outline-none  ${
+          className={`dark:bordedr-0 block w-full rounded-lg border border-gray p-3 text-sm outline-none dark:bg-lightDark dark:text-white  ${
             isFocused ? 'focus:ring-2 focus:ring-active' : ''
           }`}
           rows={4}
@@ -52,14 +52,14 @@ export const Input = ({ type, label }: DefaultInput) => {
       <label
         className={`${
           isFocused || inputValue
-            ? '-translate-x-2 -translate-y-[40px] text-sm text-active '
+            ? '-translate-x-2 -translate-y-[40px] text-sm  '
             : 'text-gray-500 '
         } pointer-events-none absolute bottom-2 left-3 text-gray transition-all duration-300`}
       >
         {label}
       </label>
       <input
-        className={`block w-full rounded-lg bg-lightDark p-3 text-sm text-white outline-none  ${
+        className={`block w-full rounded-lg border border-gray p-3 text-sm outline-none dark:border-0 dark:bg-lightDark dark:text-white  ${
           isFocused ? 'focus:ring-2 focus:ring-active' : ''
         }`}
         type={type}

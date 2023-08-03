@@ -5,7 +5,7 @@ import { ProjectItem } from '../components/Projects'
 
 export const Projects = () => {
   return (
-    <div className="bg-dark pt-24">
+    <div className="pt-24 dark:bg-dark">
       <Container>
         <SectionLabel label="My Projects:" />
         {ProjectsItems.map((item, i) => (
