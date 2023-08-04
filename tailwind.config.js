@@ -15,7 +15,8 @@ module.exports = {
         active: '#9E86FF',
         gray: '#676D75',
         dark: '#131417',
-        lightDark: '#1a1c4d'
+        lightDark: '#1a1c4d',
+        white: '#FAF9F6'
       },
       maxWidth: {
         base: '1400px'
