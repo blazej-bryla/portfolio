@@ -34,8 +34,10 @@ export const Input = ({ type, label }: DefaultInput) => {
           {label}
         </label>
         <textarea
-          className={`dark:bordedr-0 block w-full rounded-lg border border-gray p-3 text-sm outline-none dark:bg-lightDark dark:text-white  ${
-            isFocused ? 'focus:ring-2 focus:ring-active' : ''
+          className={`w-full rounded-lg border p-3 text-sm outline-none dark:border-active dark:bg-dark  dark:text-white  ${
+            isFocused
+              ? 'focus:ring-2 focus:ring-gray dark:focus:ring-active'
+              : ''
           }`}
           rows={4}
           value={inputValue}
@@ -59,8 +61,8 @@ export const Input = ({ type, label }: DefaultInput) => {
         {label}
       </label>
       <input
-        className={`block w-full rounded-lg border border-gray p-3 text-sm outline-none dark:border-0 dark:bg-lightDark dark:text-white  ${
-          isFocused ? 'focus:ring-2 focus:ring-active' : ''
+        className={`w-full rounded-lg border p-3 text-sm outline-none dark:border-active dark:bg-dark dark:text-white  ${
+          isFocused ? 'focus:ring-2 focus:ring-gray dark:focus:ring-active' : ''
         }`}
         type={type}
         value={inputValue}

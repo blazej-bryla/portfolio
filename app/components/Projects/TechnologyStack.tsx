@@ -6,7 +6,7 @@ export const TechnologyStack = ({ technologies }: TechnologiesProps) => {
   return (
     <div className="flex flex-col gap-y-2">
       <p className="text-dark dark:text-white">Technology Stack:</p>
-      <div className="flex w-fit flex-wrap gap-2 rounded-lg border border-dark p-4 dark:border-0 dark:bg-lightDark">
+      <div className="flex w-fit justify-between gap-2 rounded-lg border border-dark p-4 text-xl text-dark transition duration-300 dark:border-active dark:bg-dark dark:text-white md:border-lightDark dark:md:hover:bg-lightDark">
         {technologies.map((item, i) => (
           <TechnologiesItem item={item} key={i} />
         ))}
