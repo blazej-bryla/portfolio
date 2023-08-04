@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export const DesktopNavbar = () => {
   return (
-    <div className="mx-auto hidden h-[72px] max-w-base items-center justify-between px-6 dark:bg-dark  md:flex">
+    <div className="mx-auto hidden h-[72px] max-w-base items-center justify-between bg-white px-6 dark:bg-dark  md:flex">
       <Link
         href="/"
         className="flex translate-y-1 cursor-pointer items-center justify-center font-borel text-dark transition dark:text-gray"
