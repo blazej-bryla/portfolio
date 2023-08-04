@@ -22,7 +22,7 @@ export const ThemeSwitcher = () => {
           icon="ph:moon"
           width="25"
           height="25"
-          className="cursor-pointer"
+          className="cursor-pointer text-white"
           onClick={() => setTheme('light')}
         />
       ) : (
@@ -30,7 +30,7 @@ export const ThemeSwitcher = () => {
           icon="ph:sun"
           width="25"
           height="25"
-          className="cursor-pointer"
+          className="cursor-pointer text-dark"
           onClick={() => setTheme('dark')}
         />
       )}
