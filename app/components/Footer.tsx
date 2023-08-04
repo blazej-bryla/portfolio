@@ -1,5 +1,5 @@
 import React from 'react'
 
 export const Footer = () => {
-  return <footer className="dark:bg-dark"></footer>
+  return <footer className="bg-white dark:bg-dark"></footer>
 }

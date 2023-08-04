@@ -4,7 +4,7 @@ import { AboutMeText } from './AboutMe/AboutMeText'
 
 export const AboutMe = () => {
   return (
-    <div id="about-me" className="pt-24 dark:bg-dark">
+    <div id="about-me" className="bg-white pt-24 dark:bg-dark">
       <Container>
         <SectionLabel label="About Me" />
         <AboutMeText />

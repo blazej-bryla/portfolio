@@ -34,7 +34,7 @@ export const Input = ({ type, label }: DefaultInput) => {
           {label}
         </label>
         <textarea
-          className={`w-full rounded-lg border p-3 text-sm outline-none dark:border-active dark:bg-dark  dark:text-white  ${
+          className={`w-full rounded-lg border bg-white p-3 text-sm outline-none dark:border-active dark:bg-dark  dark:text-white  ${
             isFocused
               ? 'focus:ring-2 focus:ring-gray dark:focus:ring-active'
               : ''
@@ -61,7 +61,7 @@ export const Input = ({ type, label }: DefaultInput) => {
         {label}
       </label>
       <input
-        className={`w-full rounded-lg border p-3 text-sm outline-none dark:border-active dark:bg-dark dark:text-white  ${
+        className={`w-full rounded-lg border bg-white p-3 text-sm outline-none dark:border-active dark:bg-dark dark:text-white  ${
           isFocused ? 'focus:ring-2 focus:ring-gray dark:focus:ring-active' : ''
         }`}
         type={type}
