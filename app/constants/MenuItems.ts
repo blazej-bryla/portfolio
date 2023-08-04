@@ -13,7 +13,7 @@ export const MenuItems: MenuItemsType[] = [
   },
   {
     label: 'Certifications',
-    href: '#certifications',
+    href: '#certificates',
     icon: 'tabler:medal'
   },
   {
