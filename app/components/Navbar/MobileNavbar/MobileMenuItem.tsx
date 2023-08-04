@@ -8,7 +8,7 @@ export const MobileMenuItem = ({ item }: { item: MenuItemsType }) => {
   return (
     <Link
       href={item.href}
-      className="flex flex-col items-center justify-center text-xs dark:bg-dark"
+      className="flex flex-col items-center justify-center bg-white text-xs dark:bg-dark"
     >
       <Icon
         icon={item.icon}
