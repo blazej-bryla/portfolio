@@ -4,6 +4,7 @@ import { TechnologiesCategory, TechnologiesItem } from './TechnologiesType'
 import { ProjectItem } from './ProjectTypes'
 import { GalleryProps, GalleryUrlType } from './GalleryType'
 import { DefaultInput } from './InputTypes'
+import { SocialItemsType } from './SocialTypes'
 
 export type {
   MenuItemsType,
@@ -13,5 +14,6 @@ export type {
   ProjectItem,
   GalleryProps,
   DefaultInput,
-  GalleryUrlType
+  GalleryUrlType,
+  SocialItemsType
 }
