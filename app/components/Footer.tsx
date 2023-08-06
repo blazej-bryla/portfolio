@@ -7,7 +7,10 @@ export const Footer = () => {
   return (
     <footer className="bg-white py-8 dark:bg-dark">
       <Container>
-        <SocialMedia socialMediaItems={SocialItems} />
+        <div className="flex items-center justify-between">
+          <p className="font-borel text-dark dark:text-white">blazej-bryla</p>
+          <SocialMedia socialMediaItems={SocialItems} />
+        </div>
       </Container>
     </footer>
   )
