@@ -18,5 +18,9 @@ export const AdditionalThemeProvider = ({
     return <>{children}</>
   }
 
-  return <ThemeProvider attribute="class">{children}</ThemeProvider>
+  return (
+    <ThemeProvider defaultTheme="system" attribute="class">
+      {children}
+    </ThemeProvider>
+  )
 }
