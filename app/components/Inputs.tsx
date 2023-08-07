@@ -1,32 +1,24 @@
 'use client'
+import React, { useState } from 'react'
+import { DefaultInput } from '../types'
 
-import { DefaultInput } from '@/app/types'
-import React, { ChangeEvent, useState } from 'react'
-
-export const Input = ({ type, label }: DefaultInput) => {
-  const [inputValue, setInputValue] = useState('')
+export const Input = ({ type, label, value, onChange }: DefaultInput) => {
   const [isFocused, setIsFocused] = useState(false)
-  const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setInputValue(e.target.value)
-  }
 
   const handleFocus = () => {
     setIsFocused(true)
   }
 
   const handleBlur = () => {
-    if (!inputValue) {
-      setIsFocused(false)
-    }
+    setIsFocused(false)
   }
+
   if (type === 'message') {
     return (
       <span className="relative flex flex-col">
         <label
           className={`${
-            isFocused || inputValue
+            isFocused || value
               ? '-translate-x-2 -translate-y-[35px] text-sm '
               : 'text-gray-500 '
           } pointer-events-none absolute left-3 top-[10px]  text-gray transition-all duration-300`}
@@ -40,9 +32,9 @@ export const Input = ({ type, label }: DefaultInput) => {
               : ''
           }`}
           rows={4}
-          value={inputValue}
+          value={value}
           onFocus={handleFocus}
-          onChange={handleChange}
+          onChange={(e) => onChange(e.target.value)}
           onBlur={handleBlur}
         />
       </span>
@@ -53,7 +45,7 @@ export const Input = ({ type, label }: DefaultInput) => {
     <span className="relative flex flex-col">
       <label
         className={`${
-          isFocused || inputValue
+          isFocused || value
             ? '-translate-x-2 -translate-y-[40px] text-sm  '
             : 'text-gray-500 '
         } pointer-events-none absolute bottom-2 left-3 text-gray transition-all duration-300`}
@@ -65,9 +57,9 @@ export const Input = ({ type, label }: DefaultInput) => {
           isFocused ? 'focus:ring-2 focus:ring-gray dark:focus:ring-active' : ''
         }`}
         type={type}
-        value={inputValue}
+        value={value}
         onFocus={handleFocus}
-        onChange={handleChange}
+        onChange={(e) => onChange(e.target.value)}
         onBlur={handleBlur}
       />
     </span>
