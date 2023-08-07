@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  env: {
+    email: 'blazej.bryla.kontakt@gmail.com',
+    password: 'vtfoeezpjaleucjr'
+  },
   images: {
     remotePatterns: [
       {
