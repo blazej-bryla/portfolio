@@ -39,9 +39,9 @@ export const Gallery = ({
                 src={item.image}
                 alt={item.label}
                 layout="responsive"
-                width={500}
+                width={750}
                 priority
-                height={500 / (16 / 11)}
+                height={526}
                 className="rounded-lg border border-gray dark:border-active"
               />
             </div>
