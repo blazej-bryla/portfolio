@@ -32,7 +32,7 @@ export const Gallery = ({
         {imageList.map((item, i) => (
           <MyTooltip key={i} content={item.label}>
             <div
-              className="w-full cursor-pointer p-2"
+              className="w-full cursor-pointer rounded-lg border border-gray dark:border-active"
               onClick={() => handleImageClick(i)}
             >
               <Image
@@ -42,7 +42,7 @@ export const Gallery = ({
                 width={750}
                 priority
                 height={526}
-                className="rounded-lg border border-gray dark:border-active"
+                className="rounded-lg"
               />
             </div>
           </MyTooltip>
