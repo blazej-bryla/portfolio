@@ -6,6 +6,8 @@ import { Container } from './Container'
 import { TechnologiesItem } from './TechnologiesItem'
 import { Gallery } from './Gallery'
 import { Input } from './Inputs'
+import { MyTooltip } from './Tooltip'
+
 export {
   Navbar,
   Header,
@@ -14,5 +16,6 @@ export {
   Container,
   TechnologiesItem,
   Gallery,
-  Input
+  Input,
+  MyTooltip
 }

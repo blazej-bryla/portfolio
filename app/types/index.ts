@@ -5,6 +5,7 @@ import { ProjectItem } from './ProjectTypes'
 import { GalleryProps, GalleryUrlType } from './GalleryType'
 import { DefaultInput } from './InputTypes'
 import { SocialItemsType } from './SocialTypes'
+import { TooltipType } from './MyTooltipType'
 
 export type {
   MenuItemsType,
@@ -15,5 +16,6 @@ export type {
   GalleryProps,
   DefaultInput,
   GalleryUrlType,
-  SocialItemsType
+  SocialItemsType,
+  TooltipType
 }
