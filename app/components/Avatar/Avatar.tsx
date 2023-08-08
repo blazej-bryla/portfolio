@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import { HeroPicture, ProfilePicture } from '@/app/assets'
 import { Avatar as AvatarType } from '@/app/types'
 
@@ -10,6 +10,7 @@ export const Avatar = ({ size, picture }: AvatarType) => {
       alt="blazej-bryla-avaatar"
       width={size}
       height={size}
+      priority
       className="rounded-[50%]"
     />
   )

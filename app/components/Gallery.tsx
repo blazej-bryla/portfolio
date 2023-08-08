@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import FsLightbox from 'fslightbox-react'
 import { GalleryProps } from '../types'
 import { galleryArrayToUrls } from '../utils'
@@ -30,23 +30,22 @@ export const Gallery = ({
     <div>
       <div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3">
         {imageList.map((item, i) => (
-          <div
-            key={i}
-            className="w-full cursor-pointer p-2"
-            onClick={() => handleImageClick(i)}
-          >
-            <MyTooltip content={item.label}>
+          <MyTooltip key={i} content={item.label}>
+            <div
+              className="w-full cursor-pointer rounded-lg border border-gray dark:border-active"
+              onClick={() => handleImageClick(i)}
+            >
               <Image
                 src={item.image}
                 alt={item.label}
                 layout="responsive"
-                style={{ objectFit: 'cover' }}
-                width={500}
-                height={500}
-                className="rounded-lg border border-gray dark:border-active"
+                width={750}
+                priority
+                height={526}
+                className="rounded-lg"
               />
-            </MyTooltip>
-          </div>
+            </div>
+          </MyTooltip>
         ))}
       </div>
 

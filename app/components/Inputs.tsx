@@ -24,6 +24,7 @@ export const Input = ({
     return (
       <span className="relative flex flex-col">
         <label
+          htmlFor={label}
           className={`${
             isFocused || value
               ? '-translate-x-2 -translate-y-[35px] text-sm '
@@ -33,6 +34,9 @@ export const Input = ({
           {label}
         </label>
         <textarea
+          aria-labelledby={label}
+          id={label}
+          name={label}
           className={`w-full rounded-lg border bg-white p-3 text-sm outline-none dark:border-active dark:bg-dark  dark:text-white  ${
             isFocused
               ? 'focus:ring-2 focus:ring-gray dark:focus:ring-active'
@@ -52,6 +56,7 @@ export const Input = ({
   return (
     <span className="relative flex flex-col">
       <label
+        htmlFor={label}
         className={`${
           isFocused || value
             ? '-translate-x-2 -translate-y-[40px] text-sm  '
@@ -61,10 +66,13 @@ export const Input = ({
         {label}
       </label>
       <input
+        aria-labelledby={label}
         className={`w-full rounded-lg border bg-white p-3 text-sm outline-none dark:border-active dark:bg-dark dark:text-white  ${
           isFocused ? 'focus:ring-2 focus:ring-gray dark:focus:ring-active' : ''
         }`}
         required
+        id={label}
+        name={label}
         title={title}
         pattern={pattern}
         type={type}
