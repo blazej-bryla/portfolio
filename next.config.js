@@ -1,4 +1,10 @@
 /** @type {import('next').NextConfig} */
+
+const bundleAnalyzer = require('next-bundle-analyzer')
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true'
+})
+
 const nextConfig = {
   env: {
     email: 'blazej.bryla.kontakt@gmail.com',
@@ -16,4 +22,4 @@ const nextConfig = {
   }
 }
 
-module.exports = nextConfig
+module.exports = withBundleAnalyzer(nextConfig)
