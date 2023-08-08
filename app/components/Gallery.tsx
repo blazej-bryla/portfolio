@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import Image from "next/legacy/image"
+import Image from 'next/image'
 import FsLightbox from 'fslightbox-react'
 import { GalleryProps } from '../types'
 import { galleryArrayToUrls } from '../utils'
