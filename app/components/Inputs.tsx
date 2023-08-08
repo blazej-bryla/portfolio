@@ -34,6 +34,7 @@ export const Input = ({
           {label}
         </label>
         <textarea
+          aria-labelledby={label}
           id={label}
           name={label}
           className={`w-full rounded-lg border bg-white p-3 text-sm outline-none dark:border-active dark:bg-dark  dark:text-white  ${
@@ -65,6 +66,7 @@ export const Input = ({
         {label}
       </label>
       <input
+        aria-labelledby={label}
         className={`w-full rounded-lg border bg-white p-3 text-sm outline-none dark:border-active dark:bg-dark dark:text-white  ${
           isFocused ? 'focus:ring-2 focus:ring-gray dark:focus:ring-active' : ''
         }`}
