@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { BackgroundHero } from '@/app/assets'
-import Image from "next/legacy/image"
+import Image from 'next/legacy/image'
 
 export const HeroGraphic = () => {
   return (
@@ -11,6 +11,7 @@ export const HeroGraphic = () => {
         src={BackgroundHero}
         layout="fill"
         objectFit="cover"
+        priority
       />
     </div>
   )

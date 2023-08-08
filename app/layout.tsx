@@ -1,10 +1,8 @@
 import './globals.css'
 import './fonts.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import { Footer, Header } from './components'
 import { AdditionalThemeProvider } from './providers'
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Błażej Bryła - Portfolio',
@@ -18,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={(inter.className, 'mb-[100px] md:mb-0')}>
+      <body className={'mb-[100px] md:mb-0'}>
         <AdditionalThemeProvider>
           <Header />
           {children}
