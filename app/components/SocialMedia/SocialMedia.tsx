@@ -1,5 +1,5 @@
 import { SocialItemsType } from '@/app/types'
-import { SocialMediaItem } from '.'
+import { SocialMediaItem } from './SocialMediaItem'
 
 export const SocialMedia = ({
   socialMediaItems

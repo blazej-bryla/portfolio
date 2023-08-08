@@ -32,7 +32,7 @@ export const React: TechnologiesItem = {
 
 export const ReactRouter: TechnologiesItem = {
   label: 'React Router',
-  icon: 'devicon:reactrouter-wordmark',
+  icon: 'simple-icons:reactrouter',
   href: 'https://reactrouter.com/'
 }
 
