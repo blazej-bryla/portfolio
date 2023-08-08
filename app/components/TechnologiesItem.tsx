@@ -6,10 +6,10 @@ import { MyTooltip } from '.'
 
 export const TechnologiesItem = ({ item }: { item: TechnologiesItemType }) => {
   return (
-    <a href={item.href} title={item.label}>
-      <MyTooltip content={item.label}>
+    <MyTooltip content={item.label}>
+      <a href={item.href} title={item.label}>
         <Icon icon={item.icon} width={40} height={40} />
-      </MyTooltip>
-    </a>
+      </a>
+    </MyTooltip>
   )
 }
