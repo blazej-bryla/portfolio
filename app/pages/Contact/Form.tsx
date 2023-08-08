@@ -36,7 +36,14 @@ export const Form = () => {
     <form className="grid grid-cols-1 gap-10 pt-4" onSubmit={handleSubmit}>
       <span className="grid grid-cols-1 gap-10 md:grid-cols-2">
         <Input type="text" label="Name" value={name} onChange={setName} />
-        <Input type="email" label="Email" value={email} onChange={setEmail} />
+        <Input
+          type="email"
+          pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+          title="example@email.co"
+          label="Email"
+          value={email}
+          onChange={setEmail}
+        />
       </span>
       <Input
         type="message"
