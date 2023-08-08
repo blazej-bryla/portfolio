@@ -4,6 +4,7 @@ import Image from 'next/image'
 import FsLightbox from 'fslightbox-react'
 import { GalleryProps } from '../types'
 import { galleryArrayToUrls } from '../utils'
+import { MyTooltip } from '.'
 
 export const Gallery = ({
   imageList = [
@@ -34,15 +35,17 @@ export const Gallery = ({
             className="w-full cursor-pointer p-2"
             onClick={() => handleImageClick(i)}
           >
-            <Image
-              src={item.image}
-              alt={item.label}
-              layout="responsive"
-              style={{ objectFit: 'cover' }}
-              width={500}
-              height={500}
-              className="rounded-lg border border-gray dark:border-active"
-            />
+            <MyTooltip content={item.label}>
+              <Image
+                src={item.image}
+                alt={item.label}
+                layout="responsive"
+                style={{ objectFit: 'cover' }}
+                width={500}
+                height={500}
+                className="rounded-lg border border-gray dark:border-active"
+              />
+            </MyTooltip>
           </div>
         ))}
       </div>
