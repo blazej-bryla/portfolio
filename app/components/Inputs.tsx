@@ -34,6 +34,7 @@ export const Input = ({
           {label}
         </label>
         <textarea
+          id={label}
           name={label}
           className={`w-full rounded-lg border bg-white p-3 text-sm outline-none dark:border-active dark:bg-dark  dark:text-white  ${
             isFocused
@@ -68,6 +69,7 @@ export const Input = ({
           isFocused ? 'focus:ring-2 focus:ring-gray dark:focus:ring-active' : ''
         }`}
         required
+        id={label}
         name={label}
         title={title}
         pattern={pattern}
