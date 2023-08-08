@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { BackgroundHero } from '@/app/assets'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 
 export const HeroGraphic = () => {
   return (

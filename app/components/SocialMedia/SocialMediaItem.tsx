@@ -1,6 +1,6 @@
 'use client'
 import { SocialItemsType } from '@/app/types'
-import { Icon } from '@iconify/react/dist/iconify.js'
+import { Icon } from '@iconify/react'
 import { MyTooltip } from '..'
 
 export const SocialMediaItem = ({ item }: { item: SocialItemsType }) => {
