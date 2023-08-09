@@ -1,5 +1,4 @@
 import { MenuItemsType } from './MenuItemsType'
-import { Avatar } from './AvatarType'
 import { TechnologiesCategory, TechnologiesItem } from './TechnologiesType'
 import { ProjectItem } from './ProjectTypes'
 import { GalleryProps, GalleryUrlType } from './GalleryType'
@@ -9,7 +8,6 @@ import { TooltipType } from './MyTooltipType'
 
 export type {
   MenuItemsType,
-  Avatar,
   TechnologiesCategory,
   TechnologiesItem,
   ProjectItem,
