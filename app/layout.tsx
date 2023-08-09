@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={'mb-[100px] md:mb-0'}>
+      <body className={'mb-[50px] md:mb-0'}>
         <AdditionalThemeProvider>
           <Header />
           {children}
