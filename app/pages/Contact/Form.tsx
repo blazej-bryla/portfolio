@@ -54,7 +54,7 @@ export const Form = () => {
       <div className="flex w-full justify-end">
         <button
           type="submit"
-          className="w-fit rounded-lg border border-gray px-6 py-2 transition duration-300 dark:border-active dark:text-active md:hover:bg-gray md:hover:text-white dark:md:hover:bg-active"
+          className="w-fit rounded-lg border border-dark px-6 py-2 transition duration-300 dark:border-active dark:text-white md:hover:bg-darkerWhite dark:md:hover:bg-lightDark"
         >
           Send
         </button>
