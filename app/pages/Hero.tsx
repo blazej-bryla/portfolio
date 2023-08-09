@@ -18,6 +18,7 @@ export const Hero = () => {
             height={300}
             alt="blazej-bryla-hero-photo"
             src={MemojiLaptop}
+            priority
           />
         </div>
         <HeroText />
