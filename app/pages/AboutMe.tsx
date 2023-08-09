@@ -19,6 +19,15 @@ export const AboutMe = () => {
           />
           <AboutMeText />
         </div>
+        <div className="flex w-full items-center justify-center pt-4 md:justify-start">
+          <a
+            href="/pdf/blazej_bryla_cv.pdf"
+            download
+            className="w-fit cursor-pointer rounded-lg border border-dark p-3 text-dark transition duration-300 dark:border-active dark:text-white md:dark:hover:bg-lightDark"
+          >
+            Get my CV 💼
+          </a>
+        </div>
       </Container>
     </div>
   )
