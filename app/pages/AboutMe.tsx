@@ -23,7 +23,7 @@ export const AboutMe = () => {
           <a
             href="/pdf/blazej_bryla_cv.pdf"
             download
-            className="w-fit cursor-pointer rounded-lg border border-dark p-3 text-dark transition duration-300 dark:border-active dark:text-white md:dark:hover:bg-lightDark"
+            className="w-fit cursor-pointer rounded-lg border border-dark p-3 text-dark transition duration-300 dark:border-active dark:text-white md:hover:bg-darkerWhite md:dark:hover:bg-lightDark"
           >
             Get my CV 💼
           </a>
