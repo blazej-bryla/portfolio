@@ -16,14 +16,16 @@ export const ThemeSwitcher = () => {
   }
 
   return (
-    <div>
+    <div
+      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      className="rounded-lg border border-gray bg-white p-2 dark:border-active dark:bg-lightDark"
+    >
       {theme === 'dark' ? (
         <Icon
           icon="ph:moon"
           width="25"
           height="25"
           className="cursor-pointer text-white"
-          onClick={() => setTheme('light')}
         />
       ) : (
         <Icon
