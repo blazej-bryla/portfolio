@@ -1,8 +1,9 @@
 import React from 'react'
 import { HeroGraphic } from './Hero/HeroGraphic'
 import { HeroText } from './Hero/HeroText'
-import { Avatar } from '../components/Avatar/Avatar'
 import { ThemeSwitcher } from '../components/Navbar'
+import Image from 'next/image'
+import { MemojiLaptop } from '../assets'
 
 export const Hero = () => {
   return (
@@ -11,8 +12,13 @@ export const Hero = () => {
         <ThemeSwitcher />
       </div>
       <div className=" flex -translate-y-[100px] flex-col items-center justify-center gap-8">
-        <div className="translate-y-[20px]">
-          <Avatar size={200} picture="hero" />
+        <div className="-translate-y-[20px]">
+          <Image
+            width={300}
+            height={300}
+            alt="blazej-bryla-hero-photo"
+            src={MemojiLaptop}
+          />
         </div>
         <HeroText />
       </div>
