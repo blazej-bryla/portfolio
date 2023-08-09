@@ -16,6 +16,7 @@ export const AboutMe = () => {
             height={250}
             alt="blazej-bryla-memoji"
             className="pb-4"
+            priority
           />
           <AboutMeText />
         </div>
