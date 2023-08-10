@@ -14,8 +14,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  console.log(cursiveFont)
-
   return (
     <html
       lang="en"
