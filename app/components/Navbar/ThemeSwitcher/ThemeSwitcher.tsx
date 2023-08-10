@@ -18,7 +18,7 @@ export const ThemeSwitcher = () => {
   return (
     <div
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-      className="rounded-lg border border-gray bg-white p-2 dark:border-active dark:bg-lightDark"
+      className="rounded-lg border border-gray bg-white p-2 dark:border-active dark:bg-dark"
     >
       {theme === 'dark' ? (
         <Icon
