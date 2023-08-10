@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --font-cursiveFont: 'var(--font-cursiveFont)';
-}
-
 * {
   margin: 0;
   padding: 0;
