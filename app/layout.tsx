@@ -1,8 +1,8 @@
 import './globals.css'
-import './fonts.css'
 import type { Metadata } from 'next'
 import { Footer, Header } from './components'
 import { AdditionalThemeProvider } from './providers'
+import { cursiveFont, mainFont } from './fonts'
 
 export const metadata: Metadata = {
   title: 'Błażej Bryła - Portfolio',
@@ -15,7 +15,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={mainFont.className}>
+      <style>
+        {`
+          :root {
+            --font-cursiveFont: ${cursiveFont.style.fontFamily};
+          }
+        `}
+      </style>
       <body className={'mb-[50px] md:mb-0'}>
         <AdditionalThemeProvider>
           <Header />
