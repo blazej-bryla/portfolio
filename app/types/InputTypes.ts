@@ -4,5 +4,6 @@ export type DefaultInput = {
   value: string
   pattern?: string
   title?: string
+  error: string
   onChange: (value: string) => void
 }
