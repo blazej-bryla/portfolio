@@ -3,7 +3,7 @@ import { SocialItemsType } from '../types/SocialTypes'
 export const SocialItems: SocialItemsType[] = [
   {
     label: 'Twitter',
-    href: 'https://twitter.com/brykuski',
+    href: 'https://x.com/brykuski',
     icon: 'fa6-brands:square-x-twitter'
   },
   {
