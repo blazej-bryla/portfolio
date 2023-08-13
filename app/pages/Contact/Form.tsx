@@ -1,85 +1,77 @@
 'use client'
 import { Input } from '@/app/components'
-import React, { useState } from 'react'
-import { z } from 'zod'
+import { ContactType } from '@/app/types'
+import { contactSchema } from '@/app/types/schema/form.schema'
+import { zodResolver } from '@hookform/resolvers/zod'
+import React from 'react'
+import { useForm } from 'react-hook-form'
 
 export const Form = () => {
-  const schema = z.object({
-    name: z
-      .string()
-      .min(2, { message: 'Name must have at least 2 characters' }),
-    email: z.string().email({ message: 'Invalid email format' }),
-    message: z
-      .string()
-      .min(10, { message: 'Message must have at least 10 characters' })
+  const {
+    register,
+    handleSubmit,
+    setValue,
+    formState: { errors }
+  } = useForm<ContactType>({
+    resolver: zodResolver(contactSchema),
+    defaultValues: {
+      name: '',
+      email: '',
+      message: ''
+    }
   })
 
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
-  const [errors, setErrors] = useState({})
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-
+  const onSubmit = async (data: ContactType) => {
     try {
-      // Tworzymy walidator
-      schema.parse({
-        name,
-        email,
-        message
-      })
-
       const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ name, email, message })
+        body: JSON.stringify(data)
       })
 
       if (response.ok) {
-        alert('Wiadomość została wysłana.')
-        setName('')
-        setEmail('')
-        setMessage('')
+        alert('Email was sent!')
       } else {
-        throw new Error('Wystąpił błąd podczas wysyłania wiadomości.')
+        alert('Email sending failed')
       }
     } catch (error) {
-      if (error instanceof z.ZodError) {
-        setErrors(error.formErrors.fieldErrors)
-      }
-      console.error(error)
+      console.error('An error occurred:', error)
     }
   }
 
   return (
-    <form className="grid grid-cols-1 gap-10 pt-4" onSubmit={handleSubmit}>
+    <form
+      className="grid grid-cols-1 gap-10 pt-4"
+      onSubmit={handleSubmit(onSubmit)}
+    >
       <span className="grid grid-cols-1 gap-10 md:grid-cols-2">
         <Input
+          valueName="name"
           type="text"
           label="Name"
-          value={name}
-          onChange={setName}
-          error={errors.name} // Dodaliśmy obsługę błędów dla pola 'name'
+          error={errors.name?.message}
+          {...register('name')}
+          setValue={setValue}
         />
         <Input
-          type="email"
-          pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+          valueName="email"
           title="example@email.co"
+          type="email"
           label="E-mail"
-          value={email}
-          onChange={setEmail}
-          error={errors.email} // Dodaliśmy obsługę błędów dla pola 'email'
+          error={errors.email?.message}
+          {...register('email')}
+          setValue={setValue}
         />
       </span>
       <Input
+        valueName="message"
+        error={errors.message?.message}
         type="message"
         label="Message"
-        value={message}
-        onChange={setMessage}
-        error={errors.message} // Dodaliśmy obsługę błędów dla pola 'message'
+        {...register('message')}
+        setValue={setValue}
       />
       <div className="flex w-full justify-end">
         <button
