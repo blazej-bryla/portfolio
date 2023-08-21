@@ -1,16 +1,18 @@
 import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 
-const emailEnv = process.env.email
-const passEnv = process.env.password
-
 const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  port: 587,
-  secure: false,
+  service: 'gmail',
+  port: 465,
+  secure: true,
+  logger: true,
+  debug: true,
   auth: {
-    user: emailEnv,
-    pass: passEnv
+    user: process.env.email,
+    pass: process.env.password
+  },
+  tls: {
+    rejectUnauthorized: true
   }
 })
 
@@ -20,8 +22,8 @@ export async function POST(req: NextRequest) {
     const { name, email, message } = body
 
     const mailOptions = {
-      from: emailEnv,
-      to: emailEnv,
+      from: process.env.email,
+      to: process.env.email,
       subject: 'New Message from Your Website',
       html: `
         <p><strong>Name:</strong> ${name}</p>
