@@ -1,8 +1,12 @@
+import { FieldError, UseFormSetValue } from 'react-hook-form'
+import { ContactType } from '.'
+
 export type DefaultInput = {
   type: 'text' | 'email' | 'message'
   label: string
-  value: string
+  valueName: 'email' | 'message' | 'name'
   pattern?: string
   title?: string
-  onChange: (value: string) => void
+  error: FieldError['message']
+  setValue: UseFormSetValue<ContactType>
 }

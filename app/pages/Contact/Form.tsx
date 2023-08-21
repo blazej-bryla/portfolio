@@ -1,55 +1,77 @@
 'use client'
 import { Input } from '@/app/components'
-import React, { useState } from 'react'
+import { ContactType } from '@/app/types'
+import { contactSchema } from '@/app/types/schema/form.schema'
+import { zodResolver } from '@hookform/resolvers/zod'
+import React from 'react'
+import { useForm } from 'react-hook-form'
 
 export const Form = () => {
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
+  const {
+    register,
+    handleSubmit,
+    setValue,
+    formState: { errors }
+  } = useForm<ContactType>({
+    resolver: zodResolver(contactSchema),
+    defaultValues: {
+      name: '',
+      email: '',
+      message: ''
+    }
+  })
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-
+  const onSubmit = async (data: ContactType) => {
     try {
       const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ name, email, message })
+        body: JSON.stringify(data)
       })
 
       if (response.ok) {
-        alert('Wiadomość została wysłana.')
-        setName('')
-        setEmail('')
-        setMessage('')
+        alert('Email was sent!')
       } else {
-        throw new Error('Wystąpił błąd podczas wysyłania wiadomości.')
+        alert('Email sending failed')
       }
     } catch (error) {
-      console.error(error)
+      console.error('An error occurred:', error)
     }
   }
 
   return (
-    <form className="grid grid-cols-1 gap-10 pt-4" onSubmit={handleSubmit}>
+    <form
+      className="grid grid-cols-1 gap-10 pt-4"
+      onSubmit={handleSubmit(onSubmit)}
+    >
       <span className="grid grid-cols-1 gap-10 md:grid-cols-2">
-        <Input type="text" label="Name" value={name} onChange={setName} />
         <Input
-          type="email"
-          pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+          valueName="name"
+          type="text"
+          label="Name"
+          error={errors.name?.message}
+          {...register('name')}
+          setValue={setValue}
+        />
+        <Input
+          valueName="email"
           title="example@email.co"
+          type="email"
           label="E-mail"
-          value={email}
-          onChange={setEmail}
+          error={errors.email?.message}
+          {...register('email')}
+          setValue={setValue}
         />
       </span>
       <Input
+        valueName="message"
+        error={errors.message?.message}
         type="message"
         label="Message"
-        value={message}
-        onChange={setMessage}
+        {...register('message')}
+        setValue={setValue}
       />
       <div className="flex w-full justify-end">
         <button
